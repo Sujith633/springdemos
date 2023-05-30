@@ -14,6 +14,7 @@
 Name:<input type="text" name="name">
 Description:<input type="text" name="des">
 Price:<input type="text" name="price">
+Status:<input type="text" name="status">
 <input type="submit" name="Add product">
 
 </pre>
@@ -22,7 +23,7 @@ Price:<input type="text" name="price">
 	<p>${message}</p>
 	<ul>
 		<c:forEach items="${products}" var="product">
-			<li>${product.id}| ${product.name} | ${product.des} | ${product.price}</li>
+			<li>${product.id}| ${product.name} | ${product.des} | ${product.price} | | ${product.status}</li>
 		</c:forEach>
 	</ul>
 </body>

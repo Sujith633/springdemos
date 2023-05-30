@@ -9,13 +9,19 @@ import javax.persistence.Id;
 @Entity
 public class Product {
 	
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="Id")
 	int id;
 	String name;
-	@Column(name="description")
+	@Column(name="Description")
 	String des;
+	@Column(name="Price")
 	double price;
+	@Column(name="Status")
+	String status;
+	
 	public int getId() {
 		return id;
 	}
@@ -41,11 +47,15 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", des=" + des + ", price=" + price + "]";
+		return "Product [id=" + id + ", name=" + name + ", des=" + des + ", price=" + price + ", status=" + status
+				+ "]";
 	}
-	
-	
-
 }
